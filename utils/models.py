@@ -22,8 +22,14 @@ from dotenv import load_dotenv
 load_dotenv(dotenv_path="../.env", override=True)
 from langchain.chat_models import init_chat_model
 
-model = init_chat_model("openai:o3-mini")
-
+#model = init_chat_model("openai:o3-mini")
+model = init_chat_model(
+    model="deepseek-chat",
+    model_provider="openai",
+    base_url="https://api.deepseek.com/v1",
+    #api_key=os.getenv("DEEPSEEK_API_KEY")
+    api_key='sk-0456e2448af046f39bc9d80b6cbefc2e'
+)
 # Use Anthropic instead of OpenAI
 # model = init_chat_model("anthropic:claude-haiku-4-5")
 
