@@ -28,7 +28,7 @@ model = init_chat_model(
     model_provider="openai",
     base_url="https://api.deepseek.com/v1",
     #api_key=os.getenv("DEEPSEEK_API_KEY")
-    api_key='sk-0456e2448af046f39bc9d80b6cbefc2e'
+    api_key=''
 )
 # Use Anthropic instead of OpenAI
 # model = init_chat_model("anthropic:claude-haiku-4-5")
